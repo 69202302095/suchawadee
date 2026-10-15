@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - สุชาวดี เนตรแสงศรี (Suchawadee Netsangsri)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        medical: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-200/60 transition-all duration-300">
+        <div class="max-w-6xl mx-mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#hero" class="flex items-center space-x-2 text-emerald-700 font-bold text-lg tracking-tight hover:opacity-80 transition">
+                    <i data-lucide="heart-pulse" class="w-6 h-6 text-emerald-600"></i>
+                    <span>SUCHAWADEE.N</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-emerald-600 transition">เกี่ยวกับ</a>
+                    <a href="#reason" class="hover:text-emerald-600 transition">แรงบันดาลใจ</a>
+                    <a href="#education" class="hover:text-emerald-600 transition">การศึกษา</a>
+                    <a href="#experience" class="hover:text-emerald-600 transition">การฝึกประสบการณ์</a>
+                    <a href="#activities" class="hover:text-emerald-600 transition">กิจกรรม</a>
+                    <a href="#certificates" class="hover:text-emerald-600 transition">เกียรติบัตร</a>
+                    <a href="#contact" class="hover:text-emerald-600 transition">ติดต่อ</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 text-sm font-medium">
+            <a href="#about" class="block py-2 text-slate-600 hover:text-emerald-600">เกี่ยวกับ</a>
+            <a href="#reason" class="block py-2 text-slate-600 hover:text-emerald-600">แรงบันดาลใจ</a>
+            <a href="#education" class="block py-2 text-slate-600 hover:text-emerald-600">การศึกษา</a>
+            <a href="#experience" class="block py-2 text-slate-600 hover:text-emerald-600">การฝึกประสบการณ์</a>
+            <a href="#activities" class="block py-2 text-slate-600 hover:text-emerald-600">กิจกรรม</a>
+            <a href="#certificates" class="block py-2 text-slate-600 hover:text-emerald-600">เกียรติบัตร</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-emerald-600">ติดต่อ</a>
+        </div>
+    </header>
+
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-emerald-50/50 via-slate-50 to-slate-50 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 text-emerald-800 text-xs font-medium">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600"></i>
+                        <span>โครงการ MOU สบช. กับ โรงเรียนพระแก้วอาสาวิทยา</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        นางสาว สุชาวดี เนตรแสงศรี
+                        <span class="block text-emerald-600 font-normal text-2xl sm:text-3xl mt-2">(ต้นตาล)</span>
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        มุ่งมั่นเข้าศึกษาใน <strong class="text-slate-800">สาขาสาธารณสุขชุมชน</strong> คณะสาธารณสุขศาสตร์และสหเวชศาสตร์ วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น
+                    </p>
+
+                    <p class="text-xs text-slate-500 font-serif italic border-l-2 border-emerald-500 pl-3 py-1">
+                        "ทนฺโต เสฏโฐ มนุสเสสุ — ในหมู่อมนุษย์ ผู้ฝึกตนดีแล้ว เป็นผู้ประเสริฐสุด"
+                    </p>
+
+                    <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="#reason" class="px-6 py-3 bg-emerald-600 text-white font-medium rounded-xl shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 transition flex items-center space-x-2">
+                            <span>แรงบันดาลใจในการเรียน</span>
+                            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-medium rounded-xl hover:bg-slate-50 transition flex items-center space-x-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-emerald-600"></i>
+                            <span>ช่องทางติดต่อ</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden bg-slate-200 border-4 border-white shadow-2xl group">
+                        <img src="https://placehold.co/600x800/d1fae5/065f46?text=Suchawadee+N." alt="สุชาวดี เนตรแสงศรี" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <p class="text-xs uppercase tracking-wider text-emerald-300 font-semibold">อาชีพในฝัน</p>
+                            <p class="text-lg font-bold">หมออนามัย / นักสาธารณสุข</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white border-y border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">ประวัติส่วนตัว</h2>
+                <div class="w-12 h-1 bg-emerald-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-500 text-sm mt-3">General Information & Background</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: ข้อมูลทั่วไป -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="user" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-4">ข้อมูลส่วนตัว</h3>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-400">ชื่อ-สกุล:</span>
+                            <span class="font-medium text-slate-800">นางสาว สุชาวดี เนตรแสงศรี</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-400">ชื่อเล่น:</span>
+                            <span class="font-medium text-slate-800">ต้นตาล</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-400">วันเกิด:</span>
+                            <span class="font-medium text-slate-800">29 พฤษภาคม 2550</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-200/60 pb-2">
+                            <span class="text-slate-400">อายุ:</span>
+                            <span class="font-medium text-slate-800">18 ปี</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-slate-400">ความสามารถพิเศษ:</span>
+                            <span class="font-medium text-slate-800">คัดลายมือ, เล่นกีฬา</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: ครอบครัว -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-4">ประวัติครอบครัว</h3>
+                    <ul class="space-y-4 text-sm text-slate-600">
+                        <li class="border-b border-slate-200/60 pb-2">
+                            <p class="text-xs text-slate-400">บิดา</p>
+                            <p class="font-medium text-slate-800">นายสุริยันต์ เนตรแสงศรี</p>
+                            <p class="text-xs text-slate-500 mt-0.5">อาชีพ: ซ่อมรถ</p>
+                        </li>
+                        <li>
+                            <p class="text-xs text-slate-400">มารดา</p>
+                            <p class="font-medium text-slate-800">นางอารอบ เนตรแสงศรี</p>
+                            <p class="text-xs text-slate-500 mt-0.5">อาชีพ: ขายของ</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: ที่อยู่ -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-4">ที่อยู่ปัจจุบัน</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        บ้านเลขที่ 25/4 ตำบลปากหมัน<br>
+                        อำเภอด่านซ้าย จังหวัดเลย<br>
+                        รหัสไปรษณีย์ 42120
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-200/60">
+                        <p class="text-xs text-slate-400">เป้าหมายในอนาคต</p>
+                        <p class="text-sm font-semibold text-emerald-700 mt-1">"หมออนามัยเพื่อชุมชนบ้านเกิด"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reason" class="py-16 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-emerald-100/50 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <div class="flex items-center space-x-3 text-emerald-600 mb-4">
+                    <i data-lucide="quote" class="w-8 h-8 opacity-40"></i>
+                    <span class="text-xs font-semibold uppercase tracking-wider">The Reason & Motivation</span>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
+                    เหตุผลที่อยากเรียนสาธารณสุข
+                </h2>
+
+                <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed text-sm sm:text-base space-y-4">
+                    <p>
+                        สำหรับแรงบันดาลใจของข้าพเจ้าที่ทำให้อยากเรียนสาธารณสุข เกิดจากประสบการณ์ในวัยเด็ก เนื่องจากคุณย่าของข้าพเจ้าสุขภาพไม่ค่อยแข็งแรง ไม่สบายอยู่บ่อยครั้ง และพี่ชายของข้าพเจ้าเคยเข้ารับการรักษาที่โรงพยาบาล ทำให้ข้าพเจ้าได้คลุกคลีกับหมอและพยาบาลมาตั้งแต่เด็กๆ ได้เห็นการทำงานที่ต้องดูแลชีวิตมนุษย์ และการดูแลผู้ป่วยอย่างใกล้ชิด ซึ่งเป็นเรื่องที่ท้าทายและน่าสนใจอย่างยิ่ง
+                    </p>
+                    <p>
+                        ในช่วงภาคเรียน ข้าพเจ้าได้มีโอกาสเข้าฝึกประสบการณ์ ณ <strong class="text-slate-800">โรงพยาบาลส่งเสริมสุขภาพตำบลปากหมัน</strong> ข้าพเจ้าได้สังเกต ได้ลงมือปฏิบัติจริง และได้ออกเยี่ยมบ้านผู้ป่วยในชุมชน ประสบการณ์เหล่านี้ยิ่งตอกย้ำให้ข้าพเจ้ามั่นใจและอยากเรียนในสายวิชาชีพสาธารณสุขมากยิ่งขึ้น
+                    </p>
+                    <p class="font-medium text-emerald-800 bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+                        "ดิฉันจะตั้งใจทำหน้าที่ให้ดีที่สุด เพื่อสร้างรอยยิ้มให้กับคนไข้และญาติคนไข้ สิ่งเหล่านี้จะเป็นแรงผลักดันและแรงบันดาลใจที่ทำให้ดิฉันมีความพยายามและเดินตามความฝัน โปรดพิจารณารับดิฉันเป็นนักศึกษาด้วยนะคะ"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-16 bg-white border-t border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">ประวัติการศึกษา</h2>
+                <div class="w-12 h-1 bg-emerald-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-500 text-sm mt-3">Educational Background</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- ประถม -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 relative">
+                    <span class="text-xs font-semibold text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full">ประถมศึกษา</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-4 mb-1">โรงเรียนบ้านนาทอง</h3>
+                    <p class="text-xs text-slate-500">จังหวัดเลย</p>
+                </div>
+
+                <!-- ม.ต้น -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 relative">
+                    <span class="text-xs font-semibold text-emerald-600 bg-emerald-100 px-3 py-1 rounded-full">มัธยมศึกษาตอนต้น</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-4 mb-1">โรงเรียนพระแก้วอาสาวิทยา</h3>
+                    <p class="text-xs text-slate-500">สำนักงานเขตพื้นที่การศึกษามัธยมศึกษาเลย หนองบัวลำภู</p>
+                </div>
+
+                <!-- ม.ปลาย -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-emerald-200 ring-2 ring-emerald-500/20 relative shadow-sm">
+                    <span class="text-xs font-semibold text-white bg-emerald-600 px-3 py-1 rounded-full">มัธยมศึกษาตอนปลาย</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-4 mb-1">โรงเรียนพระแก้วอาสาวิทยา</h3>
+                    <p class="text-xs text-slate-500">เข้าศึกษาเมื่อ 16 พฤษภาคม 2566</p>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between">
+                        <span class="text-xs font-medium text-slate-500">ผลการเรียนเฉลี่ยสะสม (GPAX 5 เทอม)</span>
+                        <span class="text-lg font-bold text-emerald-600">3.31</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">การฝึกประสบการณ์</h2>
+                <div class="w-12 h-1 bg-emerald-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-500 text-sm mt-3">Field Practice & Clinical Internship</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Experience 1 -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="building-2" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full font-medium">ปีการศึกษา 2567</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mt-5">โรงพยาบาลสมเด็จพระยุพราชด่านซ้าย</h3>
+                    <p class="text-xs text-slate-500 mt-1">อ.ด่านซ้าย จ.เลย (๑๗ เมษายน - ๗ พฤษภาคม ๒๕๖๗)</p>
+                    <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+                        ฝึกประสบการณ์ช่วงปิดภาคเรียน รับรองโดย นายแพทย์สันทัด บุญเรื่อง ได้เรียนรู้งานการรักษาพยาบาลและการส่งเสริมสุขภาพในระดับโรงพยาบาลชุมชน
+                    </p>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full font-medium">ปีการศึกษา 2568</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mt-5">โรงพยาบาลส่งเสริมสุขภาพตำบลปากหมัน</h3>
+                    <p class="text-xs text-slate-500 mt-1">ต.ปากหมัน อ.ด่านซ้าย จ.เลย (๑๘ เมษายน - ๑ พฤษภาคม ๒๕๖๘)</p>
+                    <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+                        ฝึกประสบการณ์งานสาธารณสุขชุมชน รับรองโดย นายเศกสิทธิ์ พรหมสาขา ณ สกล ผอ.รพ.สต. ปากหมัน ออกเยี่ยมบ้านผู้ป่วยหลังคลอดและร่วมจัดกิจกรรมค่ายเมล็ดฝันอนุรักษ์การอ่าน
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="py-16 bg-white border-t border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">ผลงานและกิจกรรม</h2>
+                <div class="w-12 h-1 bg-emerald-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-500 text-sm mt-3">Activities & Volunteer Work</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Activity Item -->
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">ปีการศึกษา 2569</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">โครงการแนะแนวการศึกษา MOU (สบช.สัญจร)</h4>
+                        <p class="text-xs text-slate-500 mt-1">เขตสุขภาพที่ 8</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">ปีการศึกษา 2568</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">อบรมปฐมพยาบาลเบื้องต้น & CPR</h4>
+                        <p class="text-xs text-slate-500 mt-1">การช่วยชีวิตขั้นพื้นฐาน</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="droplet" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">ปีการศึกษา 2568</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">บริจาคโลหิตสภากาชาดไทย (2 ครั้ง)</h4>
+                        <p class="text-xs text-slate-500 mt-1">และลงทะเบียนบริจาคดวงตาให้สภากาชาดไทย</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="stethoscope" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">ปีการศึกษา 2568</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">จิตอาสาตรวจสุขภาพนักเรียน</h4>
+                        <p class="text-xs text-slate-500 mt-1">โรงเรียนพระแก้วอาสาวิทยา</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="home" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">ปีการศึกษา 2568</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">จิตอาสาเยี่ยมบ้านผู้ป่วยหลังคลอด</h4>
+                        <p class="text-xs text-slate-500 mt-1">ช่วงฝึกประสบการณ์โรงพยาบาล</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="megaphone" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">ปีการศึกษา 2568</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">สภานักเรียน ฝ่ายประชาสัมพันธ์</h4>
+                        <p class="text-xs text-slate-500 mt-1">โรงเรียนพระแก้วอาสาวิทยา</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="trees" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">กิจกรรมจิตอาสา</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">จิตอาสาปลูกป่าวันเฉลิมพระชนมพรรษา</h4>
+                        <p class="text-xs text-slate-500 mt-1">พระบาทสมเด็จพระเจ้าอยู่หัว รัชกาลที่ 10</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">กิจกรรมชุมชน</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">จิตอาสาจราจรจังหวัดเลย</h4>
+                        <p class="text-xs text-slate-500 mt-1">ปฏิบัติหน้าที่บริการสังคม</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 flex items-start space-x-4">
+                    <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-semibold text-emerald-600">โครงการส่งเสริมการอ่าน</span>
+                        <h4 class="text-sm font-bold text-slate-800 mt-0.5">จัดค่าย "เมล็ดฝันอนุรักษ์การอ่าน"</h4>
+                        <p class="text-xs text-slate-500 mt-1">ช่วงฝึกประสบการณ์ รพ.ด่านซ้าย</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-16 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">เกียรติบัตรและรางวัล</h2>
+                <div class="w-12 h-1 bg-emerald-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-500 text-sm mt-3">Certificates & Awards</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cert Card 1 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-2.5 py-1 bg-amber-100 text-amber-800 text-[11px] font-bold rounded-lg mb-3">
+                            เหรียญเงิน
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base leading-snug">
+                            การแข่งขันทำหนังสือเล่มเล็ก ม.4-6
+                        </h4>
+                        <p class="text-xs text-slate-500 mt-2">
+                            งานศิลปหัตถกรรมนักเรียน ครั้งที่ 72 ประจำปีการศึกษา 2567 ณ สำนักงานเขตพื้นที่การศึกษามัธยมศึกษาเลย หนองบัวลำภู
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cert Card 2 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[11px] font-bold rounded-lg mb-3">
+                            ชนะเลิศ
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base leading-snug">
+                            การแข่งขันคัดลายมือ ม.ปลาย
+                        </h4>
+                        <p class="text-xs text-slate-500 mt-2">
+                            กิจกรรมวันสุนทรภู่และวันภาษาไทยแห่งชาติ ประจำปีการศึกษา 2566 โรงเรียนพระแก้วอาสาวิทยา
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cert Card 3 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-2.5 py-1 bg-slate-100 text-slate-800 text-[11px] font-bold rounded-lg mb-3">
+                            รองชนะเลิศ อันดับ 2
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base leading-snug">
+                            การประกวด Science Show
+                        </h4>
+                        <p class="text-xs text-slate-500 mt-2">
+                            เนื่องในงานสัปดาห์วิทยาศาสตร์แห่งชาติ ประจำปี 2567 โรงเรียนพระแก้วอาสาวิทยา
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cert Card 4 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-2.5 py-1 bg-blue-100 text-blue-800 text-[11px] font-bold rounded-lg mb-3">
+                            รางวัลความประพฤติดี
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base leading-snug">
+                            นักเรียนที่มีความประพฤติดี ทำประโยชน์เพื่อส่วนรวม
+                        </h4>
+                        <p class="text-xs text-slate-500 mt-2">
+                            มีจิตอาสา ระดับชั้นมัธยมศึกษาปีที่ 4 ประจำปีการศึกษา 2566 โรงเรียนพระแก้วอาสาวิทยา
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cert Card 5 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-2.5 py-1 bg-teal-100 text-teal-800 text-[11px] font-bold rounded-lg mb-3">
+                            ผ่านการอบรม
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base leading-snug">
+                            อบรม Soft Power ด้านการท่องเที่ยวเชิงสร้างสรรค์
+                        </h4>
+                        <p class="text-xs text-slate-500 mt-2">
+                            ยกระดับวัฒนธรรมพื้นถิ่นผีตาโขน มุ่งสู่งานระดับนานาชาติ ประจำปีการศึกษา 2568
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cert Card 6 -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-2.5 py-1 bg-emerald-100 text-emerald-800 text-[11px] font-bold rounded-lg mb-3">
+                            ผ่านการอบรม
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base leading-snug">
+                            หนึ่งโรงเรียน หนึ่งครูอนามัย สร้างเด็กไทยรอบรู้สุขภาพ
+                        </h4>
+                        <p class="text-xs text-slate-500 mt-2">
+                            ประจำปี 2566 ณ โรงเรียนพระแก้วอาสาวิทยา
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white border-t border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">ช่องทางการติดต่อ</h2>
+            <div class="w-12 h-1 bg-emerald-500 mx-auto mt-2 rounded-full"></div>
+            <p class="text-slate-500 text-sm mt-3">Contact Information</p>
+
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="tel:0927276114" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition text-center group">
+                    <div class="w-10 h-10 mx-auto bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-3">เบอร์โทรศัพท์</p>
+                    <p class="text-sm font-semibold text-slate-800 mt-1">092-727-6114</p>
+                </a>
+
+                <a href="mailto:suchawadeenetsaengsri@gmail.com" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition text-center group">
+                    <div class="w-10 h-10 mx-auto bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-3">อีเมล</p>
+                    <p class="text-xs font-semibold text-slate-800 mt-1 truncate">suchawadeenetsaengsri@gmail.com</p>
+                </a>
+
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                    <div class="w-10 h-10 mx-auto bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-3">Line ID</p>
+                    <p class="text-sm font-semibold text-slate-800 mt-1">tontal2007</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+                    <div class="w-10 h-10 mx-auto bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-3">Facebook</p>
+                    <p class="text-sm font-semibold text-slate-800 mt-1">ต้น ตาล ฯ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-slate-900 text-slate-400 text-xs text-center border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="text-slate-300 font-medium">"ทุกเรื่องราว คือการเรียนรู้ | ทุกการเรียนรู้ คือ ประสบการณ์ | ทุกประสบการณ์ คือ ทักษะชีวิต"</p>
+            <p class="mt-3 text-slate-500">© Portfolio Miss Suchawadee Netsangsri. Prepared for Sirindhorn College of Public Health Khon Kaen.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking menu links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
